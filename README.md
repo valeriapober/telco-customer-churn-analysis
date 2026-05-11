@@ -1,5 +1,9 @@
 # Telco Customer Churn Analysis
 
+Link to Tableau Public: 
+
+https://public.tableau.com/app/profile/valeria.gamilton/viz/telco_customer_churn_17783474136740/Dashboard1?publish=yes
+
 ## Project Overview
 
 This project analyzes customer churn and revenue loss in a telecom company using Tableau and SQL.  
