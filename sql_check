@@ -1,0 +1,96 @@
+USE telco;
+
+DROP TABLE IF EXISTS telco_data;
+CREATE TABLE telco_data AS
+SELECT 
+  customerID,
+  gender,
+  CASE 
+	WHEN SeniorCitizen = 1 THEN 'Yes'
+    ELSE 'No' 
+    END AS SeniorCitizen,
+  Partner,
+  Dependents,
+  tenure,
+  CASE 
+    WHEN tenure < 12 THEN '0-1 year'
+    WHEN tenure < 24 THEN '1-2 years'
+    ELSE '2+ years'
+  END AS tenure_group,
+  PhoneService,
+  MultipleLines,
+  InternetService,
+  OnlineSecurity,
+  OnlineBackup,
+  DeviceProtection,
+  TechSupport,
+  StreamingTV,
+  StreamingMovies,
+  Contract,
+  PaperlessBilling,
+  PaymentMethod,
+  MonthlyCharges,
+  TotalCharges,
+  CASE WHEN Churn = 'Yes' THEN 1 ELSE 0 END AS Churn
+FROM telco_uncleaned;
+
+SELECT * FROM telco_data;
+
+# Checking for duplicates
+SELECT customerID, COUNT(*)
+FROM telco_data
+GROUP BY 1
+HAVING COUNT(*) > 1;
+
+# Overall churn rate
+SELECT AVG(Churn) as churn_rate
+FROM telco_data;
+
+# Churn rate by segments
+SELECT Contract,
+AVG(Churn) as contract_churn
+FROM telco_data
+GROUP BY 1;
+
+SELECT PaymentMethod,
+AVG(Churn) as payment_churn
+FROM telco_data
+GROUP BY 1;
+
+SELECT InternetService,
+AVG(Churn) as service_churn
+FROM telco_data
+GROUP BY 1;
+
+#New vs Old clients Churn
+SELECT tenure_group,
+AVG(Churn) as churn_rate
+FROM telco_data
+GROUP BY 1
+ORDER BY 2 DESC;
+
+#MRR (monthly recurring revenue)
+SELECT ROUND(SUM(CASE WHEN Churn = 0 THEN MonthlyCharges END),1) as monthly_revenue
+FROM telco_data;
+
+#Lost MRR 
+SELECT ROUND(SUM(CASE WHEN Churn = 1 THEN MonthlyCharges END),1) as lost_mrr
+FROM telco_data;
+
+#ARPU - average revenue per user
+SELECT AVG(MonthlyCharges) as ARPU
+FROM telco_data;
+
+#MRR by contract
+SELECT Contract, 
+ROUND(SUM(CASE WHEN Churn = 0 THEN MonthlyCharges END),1) as monthly_revenue
+FROM telco_data
+GROUP BY 1
+ORDER BY 2 DESC;
+
+#Lost MRR by payment
+SELECT PaymentMethod,
+ROUND(SUM(CASE WHEN Churn = 1 THEN MonthlyCharges END),1) as lost_mrr
+FROM telco_data
+GROUP BY 1
+ORDER BY 2 DESC;
