@@ -39,14 +39,6 @@ Data preparation and transformation included:
 
 ---
 
-## Tools & Technologies
-
-- Tableau Public
-- Data Visualization
-- Business Analysis
-
----
-
 ## Key Insights
 
 - Customers with month-to-month contracts have the highest churn rate (~43%)
