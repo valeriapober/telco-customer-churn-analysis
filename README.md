@@ -74,7 +74,8 @@ The analysis showed that contract type and customer duration are strongly connec
 
 This project demonstrates how Tableau dashboards and business analysis can help identify retention risks, measure financial impact, and support data-driven decision-making.
 
-<img width="1919" height="1038" alt="image" src="https://github.com/user-attachments/assets/741e0894-d91b-4541-9075-d67e16a65f4a" />
+<img width="1919" height="1045" alt="image" src="https://github.com/user-attachments/assets/8bc9140f-90d8-4a18-9ef0-51a10c1ae171" />
+
 
 
 
