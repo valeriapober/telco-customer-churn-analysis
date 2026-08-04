@@ -36,14 +36,12 @@ Data preparation and transformation included:
 - creating calculated fields for churn metrics
 - calculating MRR, ARPU, and Lost MRR
 - grouping customers by duration
-- validating calculations in SQL
 
 ---
 
 ## Tools & Technologies
 
 - Tableau Public
-- SQL
 - Data Visualization
 - Business Analysis
 
