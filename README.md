@@ -2,7 +2,7 @@
 
 Link to Tableau Public: 
 
-https://public.tableau.com/app/profile/valeria.gamilton/viz/telco_customer_churn_17783474136740/Dashboard1?publish=yes
+https://public.tableau.com/views/telco_customer_churn_17783474136740/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ## Project Overview
 
@@ -74,7 +74,8 @@ The analysis showed that contract type and customer duration are strongly connec
 
 This project demonstrates how Tableau dashboards and business analysis can help identify retention risks, measure financial impact, and support data-driven decision-making.
 
-<img width="1919" height="1041" alt="image" src="https://github.com/user-attachments/assets/1316e38d-2812-4d2a-a66b-e44b4f7b0bb5" />
+<img width="1919" height="1038" alt="image" src="https://github.com/user-attachments/assets/741e0894-d91b-4541-9075-d67e16a65f4a" />
+
 
 
 
