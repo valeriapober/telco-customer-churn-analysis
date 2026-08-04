@@ -60,8 +60,6 @@ Data preparation and transformation included:
 
 ## Conclusion
 
-The analysis showed that contract type and customer duration are strongly connected to churn behavior and revenue loss.
-
-This project demonstrates how Tableau dashboards and business analysis can help identify retention risks, measure financial impact, and support data-driven decision-making.
+The findings suggest that reducing churn among month-to-month customers and improving the onboarding experience for new customers could have the greatest impact on customer retention and recurring revenue.
 
 <img width="1919" height="1044" alt="image" src="https://github.com/user-attachments/assets/3d3ddff6-a6d6-4d32-9aab-b740f0d92e38" />
