@@ -6,7 +6,7 @@ https://public.tableau.com/views/telco_customer_churn_17783474136740/Dashboard1?
 
 ## Project Overview
 
-This project analyzes customer churn and revenue loss in a telecom company using Tableau and SQL.  
+This project analyzes customer churn and revenue loss in a telecom company using Tableau.  
 The goal of the analysis was to identify:
 
 - which customers are most likely to churn
